@@ -11,6 +11,8 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
+    <!-- my Style sheet-->
+     <link rel="stylesheet" href="style.css">
 
     <title>Frontend Mentor | News homepage</title>
 
@@ -26,15 +28,20 @@
     </style>
   </head>
   <body>
+
     <header>
       <div>
         <img src="assets/images/logo.svg" alt="logo" />
       </div>
 
       <nav>
-        <button id="menu-close">
+        <!--
+ <button id="menu-close">
           <img src="assets/images/icon-menu-close.svg" alt="icon menu close" />
         </button>
+
+        -->
+       
         <ul>
           <li>Home</li>
           <li>New</li>
@@ -43,34 +50,33 @@
           <li>Categories</li>
         </ul>
       </nav>
-      <div class="menu-button">
+      <!--      <div class="menu-button">
         <button id="menu-button">
           <img src="assets/images/icon-menu.svg" alt="icon menu" />
         </button>
-      </div>
+      </div> -->
+ 
     </header>
-
     <div class="wrapper-content">
+
       <section class="show-case">
-        <article>
+        <article class="top-new">
           <picture>
-            <source
-              srcset="assets/images/image-web-3-desktop.jpg"
-              media="(main-widrh:768px)"
-            />
             <img
-              src="assets/images/image-web-3-mobile.jpg"
+              src="assets/images/image-web-3-desktop.jpg"
               alt="image-web-3-mobile"
             />
           </picture>
           <h1>The Bright Future of Web 3.0?</h1>
-
-          <p>
-            We dive into the next evolution of the web that claims to put the
-            power of the platforms back into the hands of the people. But is it
-            really fulfilling its promise?
-          </p>
-          <button>Read more</button>
+          <div class="description">
+            <p>
+              We dive into the next evolution of the web that claims to put the
+              power of the platforms back into the hands of the people. But is it
+              really fulfilling its promise?
+            </p>
+            <button>Read more</button>
+          </div>
+        
         </article>
       </section>
 
@@ -124,11 +130,11 @@
       </section>
     </div>
 
-    <div class="attribution">
+    <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+    </footer>
   </body>
 </html>
