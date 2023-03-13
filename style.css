@@ -1,3 +1,28 @@
+:root{
+--clr-softorange-primary:hsl(35, 77%, 62%);
+--clr-softred-primary: hsl(5, 85%, 63%);
+
+--clr-offwhite-neutral:hsl(36, 100%, 99%);
+--clr-grayishblue-neutral:hsl(233, 8%, 79%);
+--clr-darkgrayishblue-neutral: hsl(236, 13%, 42%);
+--clr-verydarkblue-neutral: hsl(240, 100%, 5%);
+
+--ff-accent:'Fraunces', serif;
+--ff-base:'Montserrat', sans-serif;
+
+--fw-regular:400;
+--fw-ultrabold:800;
+--fw-bold:700 ;
+--fs-paragraph:15px;
+}
+
+
+
+
+
+
+
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -50,16 +75,27 @@
   #root, #__next {
     isolation: isolate;
   }
-
+  /* style the body page*/
+  body{
+    font-family:var(--ff-base);
+    font-weight: var(--fw-regular);
+    font-size: 0.87rem;
+    background-color: var(--clr-offwhite-neutral);
+    height: calc(100vh - 4rem);
+  }
+p{
+  font-size: var(--fs-paragraph);
+}
   
  /*
- grid the main body
+ layout the wrapper-content with grid approach
  */
   .wrapper-content{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-auto-rows: min-content(200px,auto);
     grid-gap: 10px;
+    
   }
 
   .show-case{
@@ -87,4 +123,30 @@
   }
   .top-new .description{
     grid-column: 2/3;
+  }
+
+/* layout header with flex approach*/
+  header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+  }
+ 
+  nav ul{
+    
+    display: flex;
+    gap: 1rem;
+    
+    
+  }
+  nav ul li{
+    list-style: none;
+  
+    
+  }
+  a{
+    text-decoration: none;
+    font-size: 1rem;
+
   }
